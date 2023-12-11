@@ -1,0 +1,429 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/google.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css');
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(23, 23, 23);
+    font: 16px/1.5 Verdana , sans-serif;
+    color: #bda0a0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    border: none;
+}
+
+.conteiner{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+
+form{
+    width: 100%;
+    max-width: 650px;
+    /* min-height: 600px; */
+    margin: 0 auto;
+    background: rgb(53, 52, 52);
+    border-radius: 30px;
+    position: fixed;
+    z-index: 1;
+     /* вытаскивает форму на 1 план */
+    left: 50%;
+    transform: translate(-50%,100px);
+    /* display: flex; */
+    display: none;
+    flex-direction: column; 
+    overflow: hidden;
+    /* переварачиваем что бы контент не шел в троку */
+}
+
+.form-content{
+    flex-grow: 1;
+    padding: 48px;
+
+}
+
+.field{
+    margin: 20px 0;
+}
+
+form input, form button{
+    display: block;
+    /* становятся один под тругим */
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+} 
+
+form input{
+    background: transparent;
+    border: 1px solid rgb(107, 107, 132);
+    font-size: 16px;
+    outline: none;
+}
+
+form .input-email input{
+    width: 100%;
+}
+
+form .input-password input{
+    width: 100%;
+}
+
+form button{
+    border: none;
+    background: rgb(84, 156, 180);
+    width: 100%;
+}
+
+.form-footer{
+    flex-grow: 0;
+    background: rgb(103, 99, 99);
+    padding: 10px;
+}
+
+#form2{
+   width: 680px;
+   background: rgb(25, 25, 25);
+   position: fixed;
+   z-index: 1;
+
+}
+
+.form-signup{
+  width: 100%;
+}
+
+.form-signup .logo{
+    width: 240px;
+    margin: 20px;
+}
+
+.form-signup h1{
+   margin-left: 20px;
+   margin-top: 10px;
+   color: white;
+}
+
+.form-signup p{
+    margin-left: 20px;
+    margin-top: 7px;
+    color: white;
+    font-size: 10px;
+    width: 90%
+}
+
+.field-form2 label{
+    color: white;
+}
+
+.field-form2{
+  width: 94%;
+}
+
+.form-signup .field-form2{
+    margin: 20px;
+    font-size: 12px;
+}
+
+.form-signup .field-form2 .name input{
+    width: 100%;
+}
+
+.form-signup .field-form2 .email input{
+    width: 100%;
+}
+
+.form-signup .field-form2 .password input{
+    width: 100%;
+}
+
+/* ---------------------- */
+.form-signup.input-name{
+    width: 100%;
+}
+
+#form2 .email{
+    width: 100%;
+}
+
+#form2.password{
+    width: 100%
+}
+/* ---------------------- */
+
+
+.punct{
+    display: flex;
+    justify-content: space-between
+}
+
+header{
+    padding: 15px 0;
+    background: black;
+    border-bottom: 2px solid rgb(107, 107, 132);
+}
+
+.column2{
+    margin-right: 18px;
+}
+
+.check-box{
+    display: flex;
+    margin: 5px 20px;
+    color: white;
+}
+
+.box-check{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.button-create{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+.p2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.button-vibor{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.buttonGoogle,.buttonFacebook{
+    width: 200px;
+}
+
+.buttonGoogle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    color: black;
+}
+
+.buttonGoogle h4{
+    padding-left: 15px;
+}
+
+.buttonFacebook{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(68, 68, 221);
+}
+
+.gg-facebook{
+    color: white;
+}
+
+.buttonFacebook h4{
+    padding-left: 10px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+header .nav-left{
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+}
+
+header .logo img{
+    display: block;
+    width: 206px;
+    transform: translate(0,6px);
+}
+
+header .menu{
+    display: none;
+}
+
+header .menu a{
+    padding: 4px 20px;
+}
+
+header .menu a:hover,
+header .menu a.active{
+    color: rgb(214, 126, 126);
+}
+
+header .search{
+    display: none;
+    width: 150px;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid rgb(107, 107, 132);
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+}
+
+header .nav-right{
+    display: none;
+    cursor: pointer;
+}
+
+header .nav-right-singUp{
+    display: none;
+    cursor: pointer;
+}
+
+.wrap-title{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.wrap-title h1{
+    margin-bottom: 20px;
+}
+
+.menu-center{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.menu-center a{
+    display: block;
+    padding: 16px 42px;
+    border: 1px solid rgb(107, 107, 132);
+    border-radius: 5px;
+}
+
+.bloc{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.photo img{
+    /* height: 200px; */
+    width: 100%;
+    padding: 3px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    height: 100%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.wrap-text{
+    flex-grow: 1;
+    margin-top: auto;
+}
+
+.text-down{
+    flex-grow: 0;
+    color: black;
+    font-size: 12px;
+    /* padding-left: 8px; */
+}
+
+.bloc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news{
+    display: grid;
+    gap: 10px;
+}
+
+
+
+.text-p{
+    color: rgb(26, 16, 208);
+    font-size: 10px;
+    /* padding-left: 8px; */
+}
+
+h3{
+    color: white;
+    padding-left: 8px;
+    padding-bottom: 25px;
+}
+
+@media (min-width:768px){
+    .news{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:960px){
+
+    .header-nav{
+        justify-content: space-between;
+    }
+
+    header .menu{
+        display: flex;
+    }
+
+    header .search{
+        display: block;
+    }
+
+    header .nav-right{
+        display: block;
+    }
+
+    header .nav-right-singUp{
+        display: block;
+    }
+
+    .news{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+}
